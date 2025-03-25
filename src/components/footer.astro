@@ -1,0 +1,107 @@
+---
+import GitHub from "../images/github.svg";
+import Mastodon from "../images/mastodon.svg";
+---
+
+<footer>
+  <div class="column">
+    <h3 class="brand-name">Luna Institute</h3>
+    <p class="brand-description">
+      Independent EdTech R&D lab accelerating innovation in education through
+      cutting-edge research and open-source software development.
+    </p>
+    <div class="social-links">
+      <a href="https://github.com/LunaInstitute" class="link">
+        <GitHub />
+      </a>
+      <a rel="me" href="https://floss.social/@luna" class="link"><Mastodon /></a
+      >
+    </div>
+  </div>
+  <div class="copyright">
+    <p>Copyright © 2025 Luna Institute</p>
+  </div>
+</footer>
+
+<style>
+  footer {
+    border-top: 1px solid var(--primary-light);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding: 1rem 2rem;
+    justify-content: space-between;
+  }
+
+  .column {
+    flex-basis: calc(50% - 3rem);
+  }
+
+  @media (max-width: 768px) {
+    .column {
+      flex-basis: 100%;
+    }
+  }
+
+  a,
+  a:visited {
+    color: var(--primary-light);
+    text-decoration: none;
+  }
+
+  a:hover {
+    font-weight: 700;
+  }
+
+  h3,
+  p {
+    font-family: "Montserrat", sans-serif;
+  }
+
+  h3 {
+    font-weight: 600;
+    font-size: 1.33rem;
+  }
+
+  .brand-description {
+    font-size: 1rem;
+    line-height: 1.5;
+    text-align: left;
+    line-height: 1;
+  }
+
+  ul {
+    padding-left: 0;
+  }
+
+  li {
+    list-style: none;
+    margin-bottom: 0.6rem;
+    font-size: 1.1rem;
+  }
+
+  .brand-name {
+    font-weight: 700;
+  }
+
+  .social-links {
+    display: flex;
+    gap: 8px;
+  }
+
+  .link svg {
+    width: 22px;
+    height: 22px;
+    color: var(--primary-light);
+  }
+
+  .copyright {
+    width: 100%;
+  }
+
+  .copyright p {
+    font-size: 15px;
+    padding: 0;
+    margin: 0;
+  }
+</style>

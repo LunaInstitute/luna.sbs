@@ -1,0 +1,91 @@
+---
+import Footer from "../components/footer.astro";
+
+interface Props {
+  title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="description"
+      content="Independent EdTech R&D lab accelerating innovation in education through cutting-edge research and open-source software development.."
+    />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+  </head>
+  <body>
+    <!-- <Header client:load /> -->
+    <slot />
+    <Footer />
+  </body>
+</html>
+<style is:global>
+  :root {
+    --primary-light: #d8a5d8;
+    --primary-dark: #0d0d0d;
+  }
+  @font-face {
+    font-family: "Alagard";
+    src: url("/fonts/alagard.ttf");
+  }
+  @font-face {
+    font-family: "CloisterBlack";
+    src: url("/fonts/CloisterBlack.ttf");
+  }
+
+  html {
+    font-family: system-ui, sans-serif;
+    background: var(--primary-dark);
+    color: var(--primary-light);
+  }
+  main {
+    margin: auto;
+    padding: 1rem;
+    width: 800px;
+    max-width: calc(100% - 2rem);
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    margin: 0;
+  }
+  p {
+    font-family: "EB Garamond", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.5rem;
+    line-height: 1.2;
+    text-align: justify;
+  }
+
+  a,
+  a:visited {
+    color: var(--primary-light);
+  }
+</style>

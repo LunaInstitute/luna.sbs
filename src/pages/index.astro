@@ -1,0 +1,88 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout title="Luna Institute">
+  <main>
+    <h1 class="head">
+      <span style="font-family: Alagard;">Luna </span>Institute
+    </h1>
+    <div class="sub-container">
+      <p class="sub">
+        is an independent EdTech collective and R&D lab. Our goal is to
+        accelerate innovation in education through cutting-edge research and
+        open-source software development.
+      </p>
+      <a href="https://codeberg.org/LunaLab" class="button">See our work</a>
+    </div>
+  </main>
+
+  <style>
+    main {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 6rem;
+      height: 100vh;
+    }
+    .head {
+      font-size: 11.5rem;
+      margin: 0;
+      padding: 0;
+      font-weight: 500;
+      line-height: 0.7;
+      text-align: center;
+      font-family: CloisterBlack;
+      letter-spacing: -4px;
+    }
+    .sub-container {
+      display: flex;
+      flex-direction: column;
+      gap: 3rem;
+      align-items: center;
+    }
+    .sub {
+      font-size: 2rem;
+      text-align: left;
+      line-height: 1.5;
+      font-family: Montserrat;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+    }
+    .button {
+      background-color: var(--primary-light);
+      color: var(--primary-dark);
+      border: 2px solid var(--primary-dark);
+      padding: 1rem 2rem;
+      border-radius: 0.5rem;
+      text-decoration: none;
+      font-family: Montserrat;
+      font-size: 1.2rem;
+      font-weight: 500;
+      width: max-content;
+    }
+
+    .button:hover {
+      background-color: var(--primary-dark);
+      color: var(--primary-light);
+      border: 2px solid var(--primary-light);
+    }
+
+    @media screen and (max-width: 768px) {
+      .head {
+        font-size: 8rem;
+      }
+      .sub {
+        font-size: 1.5rem;
+      }
+    }
+
+    @media screen and (max-width: 480px) {
+      .head {
+        font-size: 6rem;
+      }
+    }
+  </style>
+</Layout>
